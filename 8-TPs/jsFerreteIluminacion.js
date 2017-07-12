@@ -14,57 +14,62 @@ function CalcularPrecio ()
     var precio=35;
     var cant;
     var marcas;
-
+    var precioFinal;
+    cant=document.getElementById("Cantidad").value;
+    cant=parseInt(cant);
+    marcas=document.getElementById("Marca").value;
     if(cant>=6)
     {
-     precio=35*0.50;
+     precioFinal=(precio*cant)*0.50;
     }
  	else if(cant==5)
      {
-         if(marcas=="argentinaluz")
+         if(marcas=="ArgentinaLuz")
          {
-             precio=35*0.60;
+             precioFinal=(precio*cant)*0.60;
          }
          else
          {
-             precio=35*0.70;
+            precioFinal=(precio*cant)*0.70;
          }
      }
-     if(cant==4)
+     else if(cant==4)
      {
-         if(marcas=="ArgentinaLuz"||"FelipeLamparas")
+         if(marcas=="ArgentinaLuz"|| marcas=="FelipeLamparas")
          {
-             precio=35*0.75;
+            precioFinal=(precio*cant)*0.75;
          }
          else 
          {
-             precio=35*0.80;
+             precioFinal=(precio*cant)*0.80;
          }
      } 
-     if(cant==3)
+    else if(cant==3)
       {
           if(marcas=="ArgentinaLuz")
            {
-               precio=35*0.85;
+              precioFinal=(precio*cant)*0.85;
            }
           else if(marcas=="FelipeLamparas")
             {
-                precio==35*0.90;
+                precioFinal=(precio*cant)*0.90;
             }
           else
           {
-              precio=35*0.95;
+              precioFinal=(precio*cant)*0.95;
           }
 
         }   
-     if(cant<3)
+    else if(cant<3)
      {
-        precio=35
+        precioFinal=35
      }
-  while(precio>=120)
-  {
-    precio=precio*1.10;
-    alert("Usted pago "+precio+" de IIBB");
-  }   
-  precio=document.getElementById("precioDescuento").value;
+     document.getElementById("precioDescuento").value=precioFinal;
+ if(precioFinal>=120)
+   {
+    precioIIBB=precioFinal*0.10;
+    alert("Usted pago "+precioIIBB+" de IIBB");
+    document.getElementById("precioDescuento").value=precioFinal+precioIIBB;
+   }   
+
 }

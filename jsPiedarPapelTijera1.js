@@ -5,11 +5,13 @@ El jugador seleccionará una imagen correspondiente
 a su opción  y le informaremos si ganó, empató o perdió.
 */
 var eleccionMaquina;
-
+var random;
+var usuario;
 function comenzar()
 {
-	
-
+	random = Math.floor(Math.random() * (4 - 1)) + 1;
+    random=parseInt(random);
+    console.log(random);
 
 }//FIN DE LA FUNCIÓN
 function piedra()
@@ -19,7 +21,17 @@ function piedra()
 }//FIN DE LA FUNCIÓN
 function papel()
 {
+    switch(random)
+    {
+        case 1= alert("pierde");
+              break;
+        case 2= alert("empate");
+        break;    
+        case 3= alert("gano");
+        break; 
+}
 
+    
 
 }//FIN DE LA FUNCIÓN
 function tijera()
