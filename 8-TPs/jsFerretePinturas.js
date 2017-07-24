@@ -6,10 +6,12 @@ var temperatura;
 function FahrenheitCentigrados () 
 {
 	temperatura=document.getElementById("Temperatura").value;
-    
+    temp=promtp("Nª");
+	temp=par
 }
 
 function CentigradosFahrenheit () 
 {
-	
+	temperatura=document.getElementById("Temperatura").value;
+
 }

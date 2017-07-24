@@ -1,17 +1,18 @@
 function Mostrar()
 {
-    pares=0
+    pares=0;//lo uso de contador
     num=prompt("ingrese numero");
     num=parseInt(num);
 
-    for(pares=0;num%2==0;pares++)
+    for(i=1;i<=num;i++)
     {
-       if(pares==num)
+       if(i%2==0)
        {
-            alert(pares)
+           pares++;
+            alert("numeros que son pares "+i);
        }
     }
-
+    alert("cantidad de pares "+pares);
 
 
 }//FIN DE LA FUNCIÓN
