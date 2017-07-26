@@ -64,7 +64,7 @@ while(respuesta == true)
 	 }
 	 else
 	 {
-    alert("nmo hay numeros positivos");
+    alert("no hay numeros positivos");
 	 }
 } 
 

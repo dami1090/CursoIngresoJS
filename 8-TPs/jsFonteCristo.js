@@ -52,5 +52,6 @@ function NumerosImpares ()
 
 function NumerosDivisibles()
 {
-
+    contDivi=0;
+    num=document.getElementById("numero").value;
 }
