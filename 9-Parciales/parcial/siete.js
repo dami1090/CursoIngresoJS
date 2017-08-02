@@ -36,7 +36,7 @@ function Mostrar()
             sexo=prompt("ingrese sexo, letra f o m");
         }
        
-        if(sexo="m" && nota>=6)
+        if(sexo=="m" && nota>=6)
         {
             notavarones++;
             
